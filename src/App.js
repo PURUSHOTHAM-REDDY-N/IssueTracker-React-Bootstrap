@@ -294,7 +294,7 @@ export default function App() {
               </button>
             </>
           )}
-          {data.length < 1 && <div>No Issues are added yet</div>}
+          {data.length < 1 && <div className="text-center">No Issues are added yet</div>}
         </div>
       </div>
     </div>
