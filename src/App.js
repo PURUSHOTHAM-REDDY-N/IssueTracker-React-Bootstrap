@@ -148,7 +148,7 @@ export default function App() {
                 as="select"
                 aria-label="Default select example"
               >
-                <option value="">Select</option>
+                <option value="">Sele1ct</option>
                 <option value="New">New</option>
                 <option value="Assaigned">Assaigned</option>
                 <option value="Fixed">Fixed</option>
