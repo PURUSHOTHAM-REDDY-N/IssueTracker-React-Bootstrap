@@ -12,6 +12,7 @@ import Row from "react-bootstrap/Row";
 import { Icon } from "react-icons-kit";
 import { trash } from "react-icons-kit/feather/trash";
 import { edit } from "react-icons-kit/ionicons/edit";
+import Table from 'react-bootstrap/Table';
 
 //getting values from local storage
 
@@ -148,7 +149,7 @@ export default function App() {
                 as="select"
                 aria-label="Default select example"
               >
-                <option value="">Sele1ct</option>
+                <option value="">Select</option>
                 <option value="New">New</option>
                 <option value="Assaigned">Assaigned</option>
                 <option value="Fixed">Fixed</option>
@@ -228,8 +229,9 @@ export default function App() {
                 </Form>
               </div>
 
-              <div className="table-responsive">
-                <table className="table">
+              <div className="overflow-auto">
+
+                <Table striped bordered hover variant="dark">
                   <thead>
                     <tr>
                       <th>Id</th>
@@ -247,16 +249,16 @@ export default function App() {
                     {data
                       .filter((data) =>
                         filter === "0"
-                          ? data.title
-                              .toLowerCase()
-                              .includes(search.toLowerCase())
-                          : data.status === filter &&
-                            data.title
-                              .toLowerCase()
-                              .includes(search.toLowerCase())
-                      )
-                      .map((data, index) => (
-                        <tr key={data.title}>
+                        ? data.title
+                        .toLowerCase()
+                        .includes(search.toLowerCase())
+                        : data.status === filter &&
+                        data.title
+                        .toLowerCase()
+                        .includes(search.toLowerCase())
+                        )
+                        .map((data, index) => (
+                          <tr key={data.title}>
                           <td>{index + 1}</td>
                           <td>{data.title}</td>
                           <td>{data.owner}</td>
@@ -267,13 +269,13 @@ export default function App() {
                           <td
                             className="delete-btn"
                             onClick={() => deleteIssue(data.title)}
-                          >
+                            >
                             <Icon icon={trash} />
                           </td>
                           <td
                             className="delete-btn"
                             onClick={() => editIssue(data)}
-                          >
+                            >
                             <Icon icon={edit} />
                           </td>
                         </tr>
@@ -281,8 +283,9 @@ export default function App() {
 
                     
                   </tbody>
-                </table>
-              </div>
+                </Table>
+                </div>
+              
               <button
                 className="btn btn-danger btn-md"
                 onClick={() => setData([])}

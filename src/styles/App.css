@@ -1,35 +1,17 @@
-
-  .Issue-Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    height: 80vh;
-    margin: 30px 0px 0px 0px;
-  }
-
-  .data{
-    margin-top: 30px;
-    display:flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly
-  }
-
-  .Issue-form {
-    width: 420px;
-    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding:20px 20px ;
-    border-radius: 8px;
-    background-color: white;
-  }
-
-
-
-
+.Issue-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 80vh;
   
+}
 
-
-
-  
+.Issue-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding:20px 20px ;
+  border-radius: 8px;
+  background-color: white;
+  margin-left: 19px;
+}
